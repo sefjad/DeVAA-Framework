@@ -31,8 +31,6 @@ cd app/blockchain
 npm install
 npm test
 
-# View thesis
-open Documents/Thesis_Template.pdf
 ```
 
 ### Research Type
