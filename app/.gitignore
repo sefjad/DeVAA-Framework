@@ -1,0 +1,27 @@
+# Node
+node_modules/
+**/node_modules/
+
+# Hardhat
+app/blockchain/artifacts/
+app/blockchain/cache/
+
+# ZKP artifacts
+app/zkp/build/
+app/zkp/*.r1cs
+app/zkp/*.wasm
+app/zkp/*.sym
+
+# Python
+__pycache__/
+*.pyc
+
+# Env
+*.env
+app/**/.env
+
+# OS / Editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

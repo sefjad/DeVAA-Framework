@@ -1,0 +1,76 @@
+﻿\chapter{Appendix B: MVP Setup Guide}
+\label{appendix:setup}
+\section{Prerequisites}
+\begin{itemize}
+  \item Node.js LTS and npm
+  \item Python 3.10+
+  \item MetaMask and an EVM RPC endpoint (e.g., Sepolia)
+  \item Funded testnet account for gas fees
+\end{itemize}
+
+\section{Smart Contracts}
+\begin{enumerate}
+  \item Initialize Hardhat and install dependencies (OpenZeppelin, ethers, dotenv).
+  \item Compile and deploy `DeVAAEscrow.sol` to Sepolia.
+  \item Record the deployed address and export ABI as `DeVAAEscrow.json`.
+\end{enumerate}
+
+\section{Agent Runner}
+\begin{enumerate}
+  \item Create a Python virtual environment; install `fastapi`, `uvicorn`, and `web3`.
+  \item Set environment variables: `RPC_URL`, `PRIVATE_KEY`, `ACCOUNT`, `CONTRACT_ADDR`.
+  \item Run the agent: `python agent_runner.py`.
+\end{enumerate}
+
+\section{Frontend}
+\begin{enumerate}
+  \item Create a React project (Vite) and install `ethers` and `chakra-ui`.
+  \item Add `SubmitJob.jsx` and configure the contract address and ABI.
+  \item Start the dev server and connect MetaMask to Sepolia.
+\end{enumerate}
+
+\section{Benchmarking}
+Execute scripted runs: post, accept, complete, and settle jobs. Capture receipts for gas usage and log timestamps for latency. Repeat runs to compute means and standard deviations.
+
+\section{Environment Configuration}
+Create a `.env` file for both Hardhat and the agent with the following keys:
+\begin{lstlisting}[style=code]
+RPC_URL=https://sepolia.infura.io/v3/<project-id>
+PRIVATE_KEY=0x<hex-private-key>
+ACCOUNT=0x<provider-address>
+CONTRACT_ADDR=0x<deployed-escrow-address>
+CMC_API_KEY=<coinmarketcap-api-key-optional>
+\end{lstlisting}
+
+\section{Command Reference}
+\begin{lstlisting}[style=code]
+# Hardhat
+npx hardhat compile
+npx hardhat run scripts/deploy.ts --network sepolia
+npx hardhat run scripts/measure.ts --network hardhat
+
+# Agent
+python agent_runner.py
+
+# Frontend (Vite)
+npm run dev
+\end{lstlisting}
+
+\section{Redaction and Security Hygiene}
+\begin{itemize}
+  \item Do not commit or share `.env` files. Keep `PRIVATE_KEY`, RPC URLs, and any secrets out of version control. Use `.gitignore`.
+  \item Treat addresses and tx hashes as sensitive in public artifacts. When publishing, truncate to a short prefix/suffix (e.g., `0xABCD..1234`) unless full values are strictly needed.
+  \item Scrub logs prior to sharing: remove secrets, full addresses, full tx hashes, RPC endpoints, and any potentially identifying metadata.
+  \item We ensure that no real-world personal identifiers are stored on-chain. The MVP processes only technical data and does not handle personal information.
+  \item Screenshots and terminal captures should mask balances and redact sensitive strings.
+  \item Rotate and revoke any accidentally exposed keys immediately.
+\end{itemize}
+
+\section{Troubleshooting}
+\begin{itemize}
+  \item Nonce or replacement errors: wait for pending txs to confirm, then resubmit. Use `eth_getTransactionCount` to verify nonce.
+  \item Insufficient funds: ensure the requester/provider accounts have enough test ETH for gas and escrow.
+  \item Event listener misses: use fromBlock filters or reorg-safe polling with idempotent handlers.
+  \item CORS or wallet issues: clear site permissions and reconnect MetaMask; ensure the correct network (Sepolia) is selected.
+  \item ABI/address mismatch: confirm deployed address and ABI version match the contract instance.
+\end{itemize}

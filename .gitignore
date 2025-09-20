@@ -1,0 +1,95 @@
+# Node modules
+node_modules/
+*/node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+*.env
+
+# Build artifacts
+build/
+dist/
+artifacts/
+cache/
+out/
+
+# LaTeX temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.nav
+*.snm
+*.vrb
+*.idx
+*.ilg
+*.ind
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Hardhat
+app/blockchain/cache/
+app/blockchain/artifacts/
+app/blockchain/typechain/
+app/blockchain/typechain-types/
+
+# Coverage
+coverage/
+*.lcov
+.nyc_output/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Private keys and sensitive data
+*.pem
+*.key
+private_key.txt
+mnemonic.txt
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~
+
+# Meeting documents (optional - remove if you want to track these)
+Meeting_Documents/
+
+# Keep the PDF but not intermediate files
+!Documents/Thesis_Template.pdf
+!Documents/DeVAA A Decentralized and Verifiable AI Agent Marketplace.pdf

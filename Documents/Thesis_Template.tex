@@ -1,0 +1,130 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{report}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{listings}
+% Listings language definitions and defaults
+\lstdefinelanguage{Solidity}{
+  keywords={pragma, solidity, contract, library, interface, using, struct, event, modifier, function, returns, return, if, else, for, while, do, break, continue, throw, emit, try, catch, revert, assembly, let, var, true, false, this, super, new, delete, mapping, memory, storage, calldata, public, private, internal, external, view, pure, payable, nonpayable, constant, immutable, override, virtual, abstract, constructor, receive, fallback, import, as, is, require, assert, enum},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+}
+\lstdefinelanguage{TypeScript}{
+  keywords={break, case, catch, class, const, continue, debugger, default, delete, do, else, enum, export, extends, false, finally, for, function, if, import, in, instanceof, new, null, return, super, switch, this, throw, true, try, typeof, var, void, while, with, yield, let, interface, implements, private, protected, public, readonly, module, declare, type, namespace, abstract, from, as},
+  keywordstyle=\color{blue!60!black},
+  ndkeywords={boolean, number, string, undefined, never, any, unknown},
+  ndkeywordstyle=\color{teal!60!black},
+  identifierstyle=\color{black},
+  sensitive=true,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{green!40!black},
+  stringstyle=\color{orange!60!black},
+  morestring=[b]',
+  morestring=[b]",
+}
+\lstdefinelanguage{JavaScript}[]{TypeScript}{}
+\lstdefinestyle{code}{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny, 
+  xleftmargin=1em,
+  keywordstyle=\color{blue!60!black},
+  commentstyle=\color{green!40!black},
+  stringstyle=\color{orange!60!black}
+}
+\lstset{style=code}
+\usepackage{censor} % for optional redaction (\censor{}, \blackout{})
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{parskip}
+\usepackage[hidelinks]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\dissertationtitle}{DeVAA: A Decentralized and Verifiable AI Agent Marketplace}
+\newcommand{\student}{Youssef Amjahdi and Abdelmounaim Sadir}
+\newcommand{\degree}{MSc Data Science, AI, and Digital Business}
+\newcommand{\supervisor}{Dr. Loui Al Sardy}
+\newcommand{\submissiontime}{September 2025}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\maketitle{
+	{
+		\center
+		\begin{tikzpicture}[remember picture, overlay]
+			% Background image removed to avoid missing file dependency
+		\end{tikzpicture}
+		\includegraphics[width=0.5\textwidth]{gismalogo}\par
+		{\scshape\LARGE\bf Gisma University of Applied Sciences \par}
+		{\scshape\Large\bf Department of Computer and Data Sciences \par}
+		\vspace{2cm}
+		\rule{\linewidth}{0.5mm}\par
+		{\huge\bfseries\dissertationtitle\par} 
+		\rule{\linewidth}{0.5mm}\par
+		\vspace{0.2cm}
+		{\Large\bf\student\par}
+		\vspace{2cm}
+		{\large Submitted in partial fulfillment of the requirements for the degree of\par}
+		{\Large\bf\degree\par}
+		\vspace{1cm}
+		{\large Under supervision of\par}
+		{\large\bf\supervisor\par}
+		\vspace{1cm}
+		{\large\submissiontime\par}
+		\thispagestyle{empty} 
+		\newpage
+	}
+}
+\begin{document} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{plain}
+\pagenumbering{roman}
+\maketitle
+\include{chapters/abstract}
+\include{chapters/declaration}
+\include{chapters/acknowledgments}
+\include{chapters/dedication}
+\tableofcontents
+\listoffigures
+\listoftables
+\include{chapters/acronyms}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}
+\include{chapters/introduction}
+\include{chapters/foundations}
+\include{chapters/related_work}
+\include{chapters/approach}
+\include{chapters/evaluation}
+\include{chapters/conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{apalike}
+\renewcommand{\bibname}{References}
+\bibliography{references}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
