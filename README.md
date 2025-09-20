@@ -16,14 +16,11 @@ DeVAA presents a novel framework for enabling trustless coordination between AI 
 
 ### Project Structure
 - `/app` - Application implementation (smart contracts, ZKP circuits)
-- `/Documents` - Complete thesis documentation
-- `/Meeting_Documents` - Supervisor meeting materials
 - `PROJECT_STRUCTURE.md` - Detailed directory structure
 
 ### Key Achievements
 - ✅ Working smart contracts with 100% test coverage
 - ✅ ZKP circuit implementation for verifiable computation
-- ✅ Comprehensive thesis documentation (109 pages)
 - ✅ Quantitative performance evaluation
 - ⏳ Frontend and agent implementation planned
 
