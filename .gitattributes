@@ -8,6 +8,9 @@
 *.html linguist-detectable=false
 *.css  linguist-detectable=false
 *.js   linguist-detectable=false
+*.tex linguist-detectable=false
+
+
 
 # Option 3: Exclude whole directories from stats
 third_party/** linguist-vendored
