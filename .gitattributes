@@ -1,0 +1,15 @@
+# Option 1: Mark everything as vendored (excluded), then whitelist what counts
+* linguist-vendored
+# keep only your main source files counted:
+*.py linguist-vendored=false
+# or: *.ts linguist-vendored=false
+
+# Option 2: Explicitly mark filetypes as non-detectable (also excluded)
+*.html linguist-detectable=false
+*.css  linguist-detectable=false
+*.js   linguist-detectable=false
+
+# Option 3: Exclude whole directories from stats
+third_party/** linguist-vendored
+build/**       linguist-generated=true
+docs/**        linguist-documentation
