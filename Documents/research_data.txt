@@ -1,15 +1,30 @@
-# Research Data Index (Submission Tag)
+# Research Data Index 
 
 # Datasets
-- receipts.csv: exported transaction receipts for lifecycle runs
-- events.csv: exported contract events for lifecycle runs
+- receipts.csv: exported transaction receipts for lifecycle runs (TODO: add path)
+- events.csv: exported contract events for lifecycle runs (TODO: add path)
+- gas_costs_eur.csv: ETH/EUR conversions used in figures (TODO: add path)
 
 # Environment
 - OS: Windows 10 (22621)
-- Node: LTS
+- Node: LTS (TODO: record exact `node -v`)
+- npm: 10.9.0
 - Networks: Sepolia (testnet)
+- RPC: SEPOLIA_RPC_URL (redacted in repo)
+- Private key: PRIVATE_KEY (redacted in repo)
 
-# Notes
+# Toolchain Versions
+- Hardhat: see app/blockchain/package.json
+- Ethers: via hardhat-toolbox
+- Circom/snarkjs: see app/zkp/package.json (snarkjs ^0.7.5)
+
+# Contract Artifacts (addresses by network)
+- deployments/sepolia.json (TODO: add file and addresses)
+- deployments/localhost.json (optional)
+
+# Reproducibility Notes
 - Record base fee and priority tip for each run
 - Keep ETH/EUR rate snapshots for cost conversion
+- Use `node scripts/cli.js ... --no-wait` when only submission time is needed
+- Save `txReceipt.json` and emitted events per lifecycle
 
