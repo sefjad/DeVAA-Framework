@@ -1,17 +1,14 @@
 # Research Data Index 
 
-# Datasets
-- receipts.csv: exported transaction receipts for lifecycle runs (TODO: add path)
-- events.csv: exported contract events for lifecycle runs (TODO: add path)
-- gas_costs_eur.csv: ETH/EUR conversions used in figures (TODO: add path)
+
 
 # Environment
-- OS: Windows 10 (22621)
+- OS: Windows 10
 - Node: LTS (TODO: record exact `node -v`)
 - npm: 10.9.0
 - Networks: Sepolia (testnet)
-- RPC: SEPOLIA_RPC_URL (redacted in repo)
-- Private key: PRIVATE_KEY (redacted in repo)
+- RPC: SEPOLIA_RPC_URL 
+- Private key: PRIVATE_KEY 
 
 # Toolchain Versions
 - Hardhat: see app/blockchain/package.json
