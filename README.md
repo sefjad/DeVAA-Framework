@@ -1,8 +1,6 @@
 # DeVAA: Decentralized and Verifiable AI Agent Marketplace
 
-## MSc Thesis Project
-
-This repository contains the complete thesis project for the MSc in Data Science, AI, and Digital Business at GISMA University of Applied Sciences.
+This repository contains the complete DeVAA project.
 
 ### Authors
 - Youssef Amjahdi
@@ -36,11 +34,7 @@ npm test
 ### Research Type
 Development-Based Research with Applied Research elements, following Design Science Research methodology.
 
-### Submission
-September 26, 2025
-
 ### License
 - Code: MIT License
-- Thesis: All rights reserved
 
 For more details, see `Documents/research_data.txt` for all references and resources used.
