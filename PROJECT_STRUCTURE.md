@@ -66,17 +66,3 @@ npm install
 ```
 
 
-## Authors
-- Youssef Amjahdi
-- Abdelmounaim Sadir
-
-## Supervisor
-Dr. Loui Al Sardy
-
-## Institution
-GISMA University of Applied Sciences  
-MSc Data Science, AI, and Digital Business
-
-## License
-MIT License (for code) 
-
