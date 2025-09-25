@@ -1,0 +1,15 @@
+# Research Data Index (Submission Tag)
+
+# Datasets
+- receipts.csv: exported transaction receipts for lifecycle runs
+- events.csv: exported contract events for lifecycle runs
+
+# Environment
+- OS: Windows 10 (22621)
+- Node: LTS
+- Networks: Sepolia (testnet)
+
+# Notes
+- Record base fee and priority tip for each run
+- Keep ETH/EUR rate snapshots for cost conversion
+
