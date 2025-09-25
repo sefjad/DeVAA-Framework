@@ -4,7 +4,6 @@ Decentralized and Verifiable AI Agent Marketplace (MVP). This monorepo contains 
 
 - blockchain: Hardhat + Solidity smart contracts (OpenZeppelin)
 - zkp: Circom circuits + SnarkJS workflows
-- frontend: React (Vite) + Ethers.js + Tailwind + shadcn/ui
 - agent: Python AI agent using web3.py + dotenv
 
 This project follows a strict build order and TDD (tests first) per phase to keep the MVP simple and reliable.
@@ -24,7 +23,6 @@ app/
   blockchain/
   zkp/
   agent/
-  frontend/
   README.md
 ```
 
@@ -36,8 +34,7 @@ app/
   1) Blockchain
   2) ZKP
   3) Integrate ZKP + Blockchain
-  4) Frontend
-  5) Agent
+  4) Agent
 
 ## Phase Workflow (High Level)
 
@@ -58,12 +55,8 @@ We will execute these phases in order. Detailed commands and source code will be
    - Copy Verifier.sol into blockchain/contracts
    - Update JobBoard.sol to verify proofs on-chain
    - Add end-to-end Hardhat test using real proof artifacts
-
-4. Frontend (React + Vite)
-   - Basic UI: Job poster + job list
-   - Hook for Ethers.js interactions (connect, read, postJob)
-
-5. Agent (Python)
+     
+4. Agent (Python)
    - Listen for JobCreated
    - Produce proof via SnarkJS subprocess
    - Call completeJob with proof
@@ -82,14 +75,7 @@ This file was created during Phase 0 scaffolding. Proceed to Phase 1: Blockchain
 
 Open a terminal at `app/` and follow the Phase 1 instructions that will be provided next.
 
-## Final Demo (Will be expanded in Phase 6)
 
-In Phase 6 this README will be updated with a concise, step-by-step demo guide:
-
-- Start local Hardhat node, deploy contracts
-- Start React dev server
-- Run Python agent
-- Expected workflow
 
 ## Quick Demo
 
@@ -131,6 +117,6 @@ npx hardhat run scripts/deploy.js --network sepolia
 npx hardhat verify --network sepolia <JobBoard_address> <AgentRegistry_address>
 ```
 
-Expected workflow matches the thesis: postJob → acceptJob (registered agent) → (future) complete with proof.
+Expected workflow matches the project: postJob → acceptJob (registered agent) → (future) complete with proof.
 
 
