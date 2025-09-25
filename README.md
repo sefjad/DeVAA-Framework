@@ -14,15 +14,15 @@ Dr. Loui Al Sardy
 ### Abstract
 DeVAA presents a novel framework for enabling trustless coordination between AI service requesters and providers through blockchain technology and cryptographic proofs. The project implements smart contracts for marketplace coordination, zero-knowledge proof circuits for verifiable computation, and provides comprehensive performance analysis.
 
-### Project Structure
-- `/app` - Application implementation (smart contracts, ZKP circuits)
+### Project Structure (CLI-only)
+- `/app/blockchain` - Hardhat workspace with contracts, tests, and CLI scripts
+- `/app/zkp` - Circom circuits and artifacts used in the MVP
 - `PROJECT_STRUCTURE.md` - Detailed directory structure
 
-### Key Achievements
-- ✅ Working smart contracts with 100% test coverage
-- ✅ ZKP circuit implementation for verifiable computation
-- ✅ Quantitative performance evaluation
-- ⏳ Frontend and agent implementation planned
+### Key Notes
+- CLI-only MVP: there is no frontend in this repository.
+- Working smart contracts and artifact-based tests.
+- Circom circuit artifacts are included for reference.
 
 ### Quick Start
 ```bash
