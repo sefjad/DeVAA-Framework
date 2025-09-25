@@ -37,4 +37,4 @@ Development-Based Research with Applied Research elements, following Design Scie
 ### License
 - Code: MIT License
 
-For more details, see `Documents/research_data.txt` for all references and resources used.
+For more details, see `Documents/research_data.txt`.
