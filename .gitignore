@@ -86,16 +86,3 @@ mnemonic.txt
 *.temp
 *.bak
 *~
-
-# Meeting documents (optional - remove if you want to track these)
-Meeting_Documents/
-
-# Keep the PDF but not intermediate files
-!Documents/Thesis_Template.pdf
-!Documents/DeVAA A Decentralized and Verifiable AI Agent Marketplace.pdf
-
-# Exclude thesis documents and meeting materials from repo
-Documents/
-Meeting_Documents/
-Thesis_Template.pdf
-Thesis_Template_final.pdf
