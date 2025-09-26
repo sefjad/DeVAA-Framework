@@ -1,6 +1,9 @@
 # Research Data Index 
 
-
+# Datasets (local-only, not committed)
+- receipts.csv: exported transaction receipts for lifecycle runs (local path, not published)
+- events.csv: exported contract events for lifecycle runs (local path, not published)
+- gas_costs_eur.csv: ETH/EUR conversions used in figures (local path, not published)
 
 # Environment
 - OS: Windows 10
